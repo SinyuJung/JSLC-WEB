@@ -16,15 +16,20 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+ echo $html->script('ckeditor/ckeditor', false);
+ echo $html->script('ckfinder/ckfinder', false);
 ?>
 <div class="<?php echo $pluralVar;?> form">
-<?php  
-        echo $html->script('ckeditor/ckeditor', false);
+<?php
 	echo $this->Form->create();
 	echo $this->Form->inputs($scaffoldFields, array('created', 'modified', 'updated'));
 	echo $this->Form->end(__('Submit', true));
 ?>
 </div>
+<script type="text/javascript">
+var edit= CKEDITOR.replace('AboutProfile');
+CKFinder.setupCKEditor(edit,'/js/ckfinder/');
+</script>
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -46,8 +51,3 @@
 ?>
 	</ul>
 </div>
-
-<script type="text/javascript">
-var editor = CKEDITOR.replace('AboutProfile');
-CKFinder.setupCKEditor( editor, '/js/ckfinder/' );
-</script>
