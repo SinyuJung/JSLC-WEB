@@ -61,7 +61,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-$baseUrl = '/img/';
+$baseUrl = '/app/webroot/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
