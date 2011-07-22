@@ -22,7 +22,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php __('CakePHP: the rapid development php framework:'); ?>
+		<?php __('JSLC creative'); ?>
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -32,6 +32,89 @@
 
 		echo $scripts_for_layout;
 	?>
+<style TYPE="text/css">
+    
+img {
+    border-style:none;
+}    
+    
+body{
+    font-size:12px;
+    
+}
+table.logo{
+    float:left;
+}
+table.mainMenu {
+    float:left;
+    margin-top:40px;
+    margin-left:10px;
+    width:825px;
+    background-image:url("/img/menuline.png");
+}
+table.mainMenu td{
+    text-align:center;
+    width:auto;
+    font-size:1.2em;
+    color:white;
+    font-weight:bold;
+    padding-left:10px;
+    padding-right:10px;
+    background-image:url("/img/menu-off.png");
+    
+    
+}
+table.mainMenu td.blank{
+    width:350px;
+    
+}
+div#business{
+        border:2px solid #ddd;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-top:10px;
+        width:940px;
+
+
+}
+div.businessImg{
+    float:left;
+    padding-left:10px;
+}
+div.businessContents{
+    float:left;
+    padding-left:10px;
+}
+
+div.contact{
+    text-align:center;
+    font-size:2em;
+}
+div.profile{
+    padding-left:15px;
+    padding-top:10px;
+    border:2px solid #ddd;
+    width:926px;
+}
+
+table.mainMenu a{
+    color:white;
+    text-decoration:none;
+}
+table.mainMenu a:hover{
+    color:yellow;
+    
+}
+div#content{
+    width:946px;
+}
+.clearfix {zoom:1;}
+.clearfix:after{
+    content: ""; 
+    display: block; 
+    clear: both;}
+
+</style>
 </head>
 <body>
 	<div >
@@ -43,17 +126,35 @@
 			<!--
 			<?php echo $this->Session->flash(); ?>
 			-->
-			<?php echo $content_for_layout; ?>
 
-		</div>
-		<div>
-		       <!--	<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt'=> __('CakePHP: the rapid development php framework', true), 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>-->
-		</div>
+		
+		<div class="clearfix">
+                    <table class="logo">
+                        <tr>
+                            <td><a href="/"><img src="/img/logo.png"></a></td>
+                        </tr>
+                     </table>   
+                    
+                    
+                    <table  class="mainMenu">
+                        <tr>
+                            <td><a href="/" target="_self">Main</a></td>
+                            <td><a href="/Abouts" target="_self">About Us</a></td>
+                            <td><a href="/Business" target="_self">Business</a></td>
+                            <td><a href="/Contact" target="_self">Contact Us</a></td>
+                            <td class="blank"></td>
+                        </tr>
+                    </table>    
+                    
+                    
+                </div>
+            
+                <div>
+            	    <?php echo $content_for_layout; ?>
+                </div>
+            
+               </div>
+            
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
 </body>
