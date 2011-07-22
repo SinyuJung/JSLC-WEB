@@ -18,7 +18,7 @@
  */
 ?>
 <div class="<?php echo $pluralVar;?> index">
-<h2><?php echo "プロフィール登録";?></h2>
+<h2><?php echo "プロフィール変更";?></h2>
 <table cellpadding="0" cellspacing="0">
 <tr>
     <th style="text-align:center;"><?php __('管理メニュ');?></th>
@@ -39,7 +39,7 @@ echo "\n";
         echo "\t\t<td class=\"actions\" style=\"width:50px;\">\n";
 		echo "\t\t\t" . $this->Html->link(__('確認', true), array('action' => 'view', ${$singularVar}[$modelClass][$primaryKey])) . "\n";
 		echo "\t\t\t" . $this->Html->link(__('編集', true), array('action' => 'edit', ${$singularVar}[$modelClass][$primaryKey])) . "\n";
-		echo "\t\t\t" . $this->Html->link(__('削除', true), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __('Are you sure you want to delete', true).' #' . ${$singularVar}[$modelClass][$primaryKey]) . "\n";
+		//echo "\t\t\t" . $this->Html->link(__('削除', true), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __('Are you sure you want to delete', true).' #' . ${$singularVar}[$modelClass][$primaryKey]) . "\n";
 		echo "\t\t</td>\n";
 		foreach ($scaffoldFields as $_field) {
 			$isKey = false;
@@ -75,6 +75,7 @@ echo "\n";
 	<?php echo "\t ". $this->Paginator->next(__('next', true) .' >>', array(), null, array('class' => 'disabled')) . "\n";?>
 	</div>
 </div>
+<!--
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
@@ -92,4 +93,4 @@ echo "\n";
 		}
 ?>
 	</ul>
-</div>
+</div>-->

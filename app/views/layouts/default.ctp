@@ -40,7 +40,10 @@ img {
     
 body{
     font-size:12px;
-    
+    text-align:center;
+    margin:auto;
+    width:100%;
+   
 }
 table.logo{
     float:left;
